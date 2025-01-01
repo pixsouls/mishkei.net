@@ -1,0 +1,48 @@
+#root {
+  text-align: center;
+  --text-primary: #fff;
+  position: absolute;
+  position: fixed;
+}
+
+.icon {
+  z-index: 40;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.window-maximized {
+  transition-duration: 600ms;
+  transform: translate(0px, 0px) scale(1, 1) !important;
+  position: absolute;
+  cursor: 'pointer';
+  width: '280px';
+  height: '180px';
+  display: 'grid';
+  grid-auto-flow: 'row';
+  border-radius: '8px';
+  opacity: 1;
+}
+
+.window-minimized {
+  transition-duration: 600ms;
+  transform: translate(-120px, 500px) scale(.01, .6) !important;
+  opacity: 0;
+}
+
+.window-closed { 
+  opacity: 0;
+}
+
+.window-title-bar {
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  justify-content: space-between;
+  max-height: 18px;
+  padding: 4px;
+  color: var(--text-primary, #fff);
+}
